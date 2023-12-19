@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <title>Weather Dashboard</title>
+</head>
+
+<body>
+  <header class="container-fluid text-center text-white bg-primary p-3">
+    <h1 class="display-4">Weather Dashboard</h1>
+  </header>
+
+  <div class="container mt-3">
+    <div class="row">
+      <aside class="col-lg-3">
+        <h2 class="h4 text-center">Search for a City:</h2>
+        <form id="search-form" class="form">
+          <div class="input-group mb-3">
+            <input class="form-control" type="text" id="search-input" placeholder="London"
+              aria-labelledby="form-heading" aria-controls="today forecast" />
+            <div class="input-group-append">
+              <button type="button" class="btn btn-primary" id="search-button" aria-label="submit search">
+                Search
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="list-group" id="history"></div>
+      </aside>
+      <div id="dashboard" class="col-lg-9 pb-3" style="visibility: visible; display:inline;">
+        <section id="today" class="mt-3" role="region" aria-live="polite">
+          <div class="card" style="width: 900px; padding: 30px; background-color: rgb(203, 227, 248)">
+            <h3 class="card-title" id="titleToday"></h3>
+            <img id="current-icon" src="" alt="Weather icon" style="width: 15%; height: 15%;">
+            <h3 class="card-title" id="title"></h3>
+            <div class="card-body">
+              <h4 class="card-text" id="current-temp"></h4>
+              <h4 class="card-text" id="current-wind"></h4>
+              <h4 class="card-text" id="current-hum"></h4>
+            </div>
+          </div>
+        </section>
+        <section id="forecast" class="row mt-3" role="region" aria-live="polite">
+          <div class="card" style="width: 13rem; padding-left: 5px; background-color: rgb(20, 133, 233);">
+            <img id="icon1" src="" alt="Weather icon" style="width: 25%; height: 25%;">
+            <div class="card-body">
+              <h4 class="card-title" id="title1"></h4>
+              <h5 class="card-text" id="temp1"></h5>
+              <h5 class="card-text" id="wind1"></h5>
+              <h5 class="card-text" id="hum1"></h5>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; padding-left: 5px; background-color: rgb(17, 114, 199);">
+            <img id="icon2" src="" alt="Weather icon" style="width: 25%; height: 25%;">
+            <div class="card-body">
+              <h4 class="card-title" id="title2"></h4>
+              <h5 class="card-text" id="temp2"></h5>
+              <h5 class="card-text" id="wind2"></h5>
+              <h5 class="card-text" id="hum2"></h5>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; padding-left: 5px; background-color:  rgb(12, 88, 155);">
+            <img id="icon3" src="" alt="Weather icon" style="width: 25%; height: 25%;">
+            <div class="card-body">
+              <h4 class="card-title" id="title3"></h4>
+              <h5 class="card-text" id="temp3"></h5>
+              <h5 class="card-text" id="wind3"></h5>
+              <h5 class="card-text" id="hum3"></h5>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; padding-left: 5px; background-color:  rgb(10, 67, 117);">
+            <img id="icon4" src="" alt="Weather icon" style="width: 25%; height: 25%;">
+            <div class="card-body">
+              <h4 class="card-title" id="title4"></h4>
+              <h5 class="card-text" id="temp4"></h5>
+              <h5 class="card-text" id="wind4"></h5>
+              <h5 class="card-text" id="hum4"></h5>
+            </div>
+          </div>
+          <div class="card" style="width: 13rem; padding-left: 5px; background-color:  rgb(8, 51, 88);">
+            <img id="icon5" src="" alt="Weather icon" style="width: 20%; height: 20%;">
+            <div class="card-body">
+              <h4 class="card-title" id="title5"></h4>
+              <h5 class="card-text" id="temp5"></h5>
+              <h5 class="card-text" id="wind5"></h5>
+              <h5 class="card-text" id="hum5"></h5>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <!-- Moment.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+
+</html>
