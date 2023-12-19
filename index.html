@@ -19,11 +19,11 @@
 
   <div class="container mt-3">
     <div class="row">
-      <aside class="col-lg-3">
+      <aside class="col-lg-2">
         <h2 class="h4 text-center">Search for a City:</h2>
         <form id="search-form" class="form">
           <div class="input-group mb-3">
-            <input class="form-control" type="text" id="search-input" placeholder="London"
+            <input class="form-control" type="text" id="search-input" placeholder="Sheffield"
               aria-labelledby="form-heading" aria-controls="today forecast" />
             <div class="input-group-append">
               <button type="button" class="btn btn-primary" id="search-button" aria-label="submit search">
@@ -34,10 +34,14 @@
         </form>
         <div class="list-group" id="history"></div>
       </aside>
-      <div id="dashboard" class="col-lg-9 pb-3" style="visibility: visible; display:inline;">
+      <div id="dashboard" class="col-lg-10 pb-3" style="visibility: visible; display:inline;">
+        <section id="today-header" class="mt-3" role="region" aria-live="polite">
+            <div class="card" style="width: 900px; padding: 5px; background-color: rgb(184, 217, 247)">
+                <h4 class="forecast-title" id="titleToday"></h4> 
+            </div>
+        </section>
         <section id="today" class="mt-3" role="region" aria-live="polite">
           <div class="card" style="width: 900px; padding: 30px; background-color: rgb(203, 227, 248)">
-            <h3 class="card-title" id="titleToday"></h3>
             <img id="current-icon" src="" alt="Weather icon" style="width: 15%; height: 15%;">
             <h3 class="card-title" id="title"></h3>
             <div class="card-body">
@@ -47,50 +51,62 @@
             </div>
           </div>
         </section>
+
+        <section id="forecast-header" class="mt-3" role="region" aria-live="polite">
+            <div class="card" style="width: 900px; padding: 5px; background-color: rgb(47, 125, 170)">
+              <h4 class="forecast-title" id="titleForecast">5-DAY FORECAST:</h4>                          
+            </div>
+        </section>
+
         <section id="forecast" class="row mt-3" role="region" aria-live="polite">
-          <div class="card" style="width: 13rem; padding-left: 5px; background-color: rgb(20, 133, 233);">
+          <div class="card" style="width: 12rem; padding-left: 2px; margin:15px; background-color: rgb(20, 133, 233);">
             <img id="icon1" src="" alt="Weather icon" style="width: 25%; height: 25%;">
             <div class="card-body">
-              <h4 class="card-title" id="title1"></h4>
-              <h5 class="card-text" id="temp1"></h5>
-              <h5 class="card-text" id="wind1"></h5>
-              <h5 class="card-text" id="hum1"></h5>
+              <h5 class="card-title" id="title1"></h5>
+              <br>
+              <h6 class="card-text" id="temp1"></h6>
+              <h6 class="card-text" id="wind1"></h6>
+              <h6 class="card-text" id="hum1"></h6>
             </div>
           </div>
-          <div class="card" style="width: 13rem; padding-left: 5px; background-color: rgb(17, 114, 199);">
+          <div class="card" style="width: 12rem; padding-left: 2px; margin:15px; background-color: rgb(20, 133, 233);">
             <img id="icon2" src="" alt="Weather icon" style="width: 25%; height: 25%;">
             <div class="card-body">
-              <h4 class="card-title" id="title2"></h4>
-              <h5 class="card-text" id="temp2"></h5>
-              <h5 class="card-text" id="wind2"></h5>
-              <h5 class="card-text" id="hum2"></h5>
+                <h5 class="card-title" id="title2"></h5>
+                <br>
+                <h6 class="card-text" id="temp2"></h6>
+                <h6 class="card-text" id="wind2"></h6>
+                <h6 class="card-text" id="hum2"></h6>
             </div>
           </div>
-          <div class="card" style="width: 13rem; padding-left: 5px; background-color:  rgb(12, 88, 155);">
+          <div class="card" style="width: 12rem; padding-left: 2px; margin:15px; background-color:  rgb(20, 133, 233);">
             <img id="icon3" src="" alt="Weather icon" style="width: 25%; height: 25%;">
             <div class="card-body">
-              <h4 class="card-title" id="title3"></h4>
-              <h5 class="card-text" id="temp3"></h5>
-              <h5 class="card-text" id="wind3"></h5>
-              <h5 class="card-text" id="hum3"></h5>
+                <h5 class="card-title" id="title3"></h5>
+                <br>
+                <h6 class="card-text" id="temp3"></h6>
+                <h6 class="card-text" id="wind3"></h6>
+                <h6 class="card-text" id="hum3"></h6>
             </div>
           </div>
-          <div class="card" style="width: 13rem; padding-left: 5px; background-color:  rgb(10, 67, 117);">
+          <div class="card" style="width: 12rem; padding-left: 2px; margin:15px; background-color:  rgb(20, 133, 233);">
             <img id="icon4" src="" alt="Weather icon" style="width: 25%; height: 25%;">
             <div class="card-body">
-              <h4 class="card-title" id="title4"></h4>
-              <h5 class="card-text" id="temp4"></h5>
-              <h5 class="card-text" id="wind4"></h5>
-              <h5 class="card-text" id="hum4"></h5>
+                <h5 class="card-title" id="title4"></h5>
+                <br>
+                <h6 class="card-text" id="temp4"></h6>
+                <h6 class="card-text" id="wind4"></h6>
+                <h6 class="card-text" id="hum4"></h6>
             </div>
           </div>
-          <div class="card" style="width: 13rem; padding-left: 5px; background-color:  rgb(8, 51, 88);">
-            <img id="icon5" src="" alt="Weather icon" style="width: 20%; height: 20%;">
+          <div class="card" style="width: 12rem; padding-left: 2px; margin:15px; background-color:  rgb(20, 133, 233);">
+            <img id="icon5" src="" alt="Weather icon" style="width: 25%; height: 25%;">
             <div class="card-body">
-              <h4 class="card-title" id="title5"></h4>
-              <h5 class="card-text" id="temp5"></h5>
-              <h5 class="card-text" id="wind5"></h5>
-              <h5 class="card-text" id="hum5"></h5>
+                <h5 class="card-title" id="title5"></h5>
+                <br>
+                <h6 class="card-text" id="temp5"></h6>
+                <h6 class="card-text" id="wind5"></h6>
+                <h6 class="card-text" id="hum5"></h6>
             </div>
           </div>
         </section>
